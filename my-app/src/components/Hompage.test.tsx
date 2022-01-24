@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import HomePage from "./HomePage";
-import DeathScenario from "./DeathScenario";
 import "@testing-library/jest-dom/extend-expect";
 it("should call setCurrentUser when onclick", () => {
   render(<HomePage />);

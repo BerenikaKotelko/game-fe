@@ -1,19 +1,28 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import DeathScenario from "./components/DeathScenario";
+import VictoryScenario from "./components/VictoryScenario";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <header className="App-header" data-testid={"header"}>
-            Welcome to the Sherlock Game
-        </header>
-        {/* <div className="choiceButtons"> */}
-        <button data-testid={"bottle1Button"}>Drink from bottle 1</button>
-        <button data-testid={"bottle2Button"}>Drink from bottle 2</button>
-      {/* </div> */}
-      </div>
-      
+      <Router>
+        <Routes>
+          {/* different pages */}
+
+          <Route path="/" element={<HomePage />} />
+
+          <Route path="/death" element={<DeathScenario />} />
+          <Route path="/victory" element={<VictoryScenario />} />
+          {/* <Route
+          path="/victory"
+          element={<StudyListPage currentUser={currentUser} />}
+        /> */}
+        </Routes>
+      </Router>
     </>
   );
 }

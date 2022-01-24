@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import DeathScenario from "./components/DeathScenario";
+import HomePage from "./HomePage";
+import DeathScenario from "./DeathScenario";
 import "@testing-library/jest-dom/extend-expect";
 it("should call setCurrentUser when onclick", () => {
   render(<HomePage />);
@@ -23,14 +23,4 @@ it("should have a pick bottle 2 button", () => {
   );
   const headerText = screen.getByTestId("bottle2Button");
   expect(headerText).toHaveTextContent("Drink from bottle 2");
-});
-
-it("should render the Death Scenario page", () => {
-  render(
-    <Router>
-      <DeathScenario />
-    </Router>
-  );
-  const deathGreeting = screen.getByTestId("deathGreeting");
-  expect(deathGreeting).toHaveTextContent("You died, sorry!");
 });

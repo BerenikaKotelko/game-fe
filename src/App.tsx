@@ -11,13 +11,10 @@ function App() {
     <>
       <Router>
         <Routes>
-     
-
           <Route path="/" element={<HomePage />} />
 
-<Route path="/death" element={<DeathScenario />} />
-          <Route path="/victory" element={<VictoryScenario />} />
-         
+          <Route path="/result/death" element={<DeathScenario />} />
+          <Route path="/result/victory" element={<VictoryScenario />} />
         </Routes>
       </Router>
     </>

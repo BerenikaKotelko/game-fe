@@ -11,16 +11,13 @@ function App() {
     <>
       <Router>
         <Routes>
-          {/* different pages */}
+     
 
           <Route path="/" element={<HomePage />} />
 
-          <Route path="/death" element={<DeathScenario />} />
+<Route path="/death" element={<DeathScenario />} />
           <Route path="/victory" element={<VictoryScenario />} />
-          {/* <Route
-          path="/victory"
-          element={<StudyListPage currentUser={currentUser} />}
-        /> */}
+         
         </Routes>
       </Router>
     </>

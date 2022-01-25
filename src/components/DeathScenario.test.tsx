@@ -1,6 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
-import DeathScenario from "./DeathScenario";
+// import { render, screen } from "@testing-library/react";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import DeathScenario from "./DeathScenario";
 // import "@testing-library/jest-dom/extend-expect";
 // it("should render the Death Scenario page", () => {
 //   render(
@@ -21,5 +21,3 @@ import DeathScenario from "./DeathScenario";
 //   const userTable = screen.getByTestId("userTable");
 //   expect(userTable).toHaveLength(8);
 // });
-
-

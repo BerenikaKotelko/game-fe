@@ -8,7 +8,7 @@ export default function Victims() {
       const response = await fetch("http://localhost:4000/victims");
       const jsonData = await response.json();
       setUsers(jsonData);
-      console.log(users)
+      console.log(users);
     } catch (err: any) {
       console.error(err.message);
     }
@@ -22,7 +22,7 @@ export default function Victims() {
       <h2>Your fellow victims are:</h2>
       {users.map((users) => (
         <div key={users.id}>
-          <p >{users.name}</p>
+          <p>{users.name}</p>
         </div>
       ))}
     </section>

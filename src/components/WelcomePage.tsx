@@ -27,10 +27,11 @@ export default function WelcomePage({username, setUsername}: WelcomePageProps) {
           onChange={(e) => setUsername(e.target.value)}
         ></input>
             <br/>
-        <button onClick={() => handleAddUsername(username)}>
+        {username !== "" ? (
+        <button onClick={() => {if (username !== ""){handleAddUsername(username)}}}>
             <Link to="/home-page">
           Next</Link>
-        </button>
+        </button>):("")}
     
     </section>)
 }

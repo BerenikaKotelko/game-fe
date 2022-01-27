@@ -18,7 +18,7 @@ export default function Sherlocks() {
   }, []);
 
   return (
-    <section data-testid={"victimsTable"}>
+    <section className="VictimsTable"data-testid={"victimsTable"}>
       <h2>Your fellow Sherlocks are:</h2>
       {users.map((users) => (
         <div key={users.id}>

@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import Randomiser from "../utils/randomiser";
-import { useState } from "react";
+
 import axios from "axios";
-export default function HomePage() {
+
+interface HomePageProps {
+  username: string;
+  setUsername: React.Dispatch<React.SetStateAction<string>>;
+  
+  // getResources: (endpoint: string) => void;
+}
+export default function HomePage({username, setUsername}: HomePageProps) {
   const userFate = Randomiser();
-  const [username, setUsername] = useState<string>("");
-  const handleAddUsername = async (username: string) => {
-    console.log(username);
-    await axios.post(`http://localhost:4000/username`, {
-      userName: username,
-    });
-  };
+  
+
+
   const handleDeadUser = async (username: string) => {
     await axios.put(`http://localhost:4000/you-died`, {
       userName: username,
@@ -22,20 +25,12 @@ export default function HomePage() {
     });
   };
   return (
-    <>
-      <h1>Hello World</h1>
-      <div className="App">
-        <header className="App-header" data-testid={"header"}>
-          Welcome to the Sherlock Game
-        </header>
-        <input
-          placeholder="Pick a username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        ></input>
-        <button onClick={() => handleAddUsername(username)}>
-          Submit username
-        </button>
+    <section className="App">
+
+    <h1>"It's not chance, it's chess"</h1>
+    <h2>He says, as he places 2 bottles in front of you.</h2>
+    <h3> One will kill you, the other one will let you walk free.</h3>
+    <h2>Which do you choose?</h2>
         <div className="choiceButtons" data-testid="buttonComponent">
           <button>
             <Link
@@ -71,7 +66,7 @@ export default function HomePage() {
             </Link>{" "}
           </button>
         </div>
-      </div>
-    </>
+      
+    </section>
   );
 }

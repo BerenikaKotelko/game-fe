@@ -16,16 +16,27 @@ function App() {
   //     userName: username,
   //   });
   // };
-  
+
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<WelcomePage username={username} setUsername={setUsername} />} />
-          <Route path="/home-page" element={<HomePage username={username} setUsername={setUsername} />} />
+          <Route
+            path="/"
+            element={
+              <WelcomePage username={username} setUsername={setUsername} />
+            }
+          />
+          <Route
+            path="/home-page"
+            element={<HomePage username={username} setUsername={setUsername} />}
+          />
 
           <Route path="/home-page/result/death" element={<DeathScenario />} />
-          <Route path="/home-page/result/victory" element={<VictoryScenario />} />
+          <Route
+            path="/home-page/result/victory"
+            element={<VictoryScenario />}
+          />
         </Routes>
       </Router>
     </>

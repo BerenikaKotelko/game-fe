@@ -1,6 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./HomePage";
+// import { render, screen } from "@testing-library/react";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import HomePage from "./HomePage";
 import "@testing-library/jest-dom/extend-expect";
 // it("should confirm the header 'welcome to the Sherlock Game", () => {
 //   render(

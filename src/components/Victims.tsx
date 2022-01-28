@@ -1,11 +1,10 @@
 import { IUser } from "../interfaces/IUser";
 import { useState, useEffect, useCallback } from "react";
 
-
-export default function Victims()  {
+export default function Victims() {
   const baseUrl = process.env.REACT_APP_API_URL ?? "https://localhost:4000";
   const [users, setUsers] = useState<IUser[]>([]);
-  const getUsers = useCallback( async () => {
+  const getUsers = useCallback(async () => {
     try {
       const response = await fetch(`${baseUrl}/victims`);
       const jsonData = await response.json();

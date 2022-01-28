@@ -6,7 +6,6 @@ import DeathScenario from "./components/DeathScenario";
 import VictoryScenario from "./components/VictoryScenario";
 import HomePage from "./components/HomePage";
 import { useState } from "react";
-import axios from "axios";
 import WelcomePage from "./components/WelcomePage";
 
 function App() {
@@ -25,8 +24,8 @@ function App() {
           <Route path="/" element={<WelcomePage username={username} setUsername={setUsername} />} />
           <Route path="/home-page" element={<HomePage username={username} setUsername={setUsername} />} />
 
-          <Route path="/result/death" element={<DeathScenario />} />
-          <Route path="/result/victory" element={<VictoryScenario />} />
+          <Route path="/home-page/result/death" element={<DeathScenario />} />
+          <Route path="/home-page/result/victory" element={<VictoryScenario />} />
         </Routes>
       </Router>
     </>
